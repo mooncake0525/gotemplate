@@ -1,0 +1,28 @@
+AppName: VedaTerminal
+HttpPort: 56630
+RunMode: dev
+MaxPageSize: 500
+NodeID: 1
+LogConfig:
+  Level: 2
+  FileName: ./logs/vedaterminal.log
+  ErrorFileName: ./logs/vedaterminal_error.log
+  FileMaxSize: 100
+  MaxAge: 7
+DBConfig:
+  DriverName: sqlite3
+  MaxIdle: 20
+  MaxOpen: 100
+  ConnMaxLeftTime: 1800000
+  BatchInsertSize: 500
+  EnableLog: true
+
+ResourceConfig:
+  DbFileName: vedaterminal.db
+  ResourceRoot: ./resources
+  DownloadPath: ./resources/download
+  SessionsPath: ./resources/sessions
+  CurrentUserPath: ./resources/current_user
+  CurrentUserTokenFileName: token
+
+VedaTerminalServiceUrl: http://127.0.0.1:8080
